@@ -6,8 +6,7 @@ const filtered = [
 ];
 let numberOfPages;
 //let page = 0;
-function displayProducts(products, p) {
-alert(p);
+function displayProducts(products) {
   const productContainer = document.getElementById("product-container");
 
   // Loop through the products and create HTML elements
@@ -81,7 +80,7 @@ const getData = (page) => {
       !numberOfPages && (numberOfPages = result._meta.pageCount);
       console.log(!!numberOfPages);
       displayProducts(
-        result.items.filter((a) => filtered.indexOf(a.members_id) === -1 && a.custom_param_array.indexOf("مفروشة") === -1), page
+        result.items.filter((a) => filtered.indexOf(a.members_id) === -1 && a.custom_param_array.indexOf("مفروشة") === -1)
       );
     })
     .then(() => {
