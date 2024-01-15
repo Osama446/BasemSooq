@@ -5,7 +5,7 @@ const filtered = [
   1347842, 62161607, 12252248, 7505861, 27853106, 606717, 43868446, 64804481,21350876, 340441,64804481
 ];
 let numberOfPages;
-let page = 0;
+//let page = 0;
 function displayProducts(products) {
   const productContainer = document.getElementById("product-container");
 
@@ -53,7 +53,7 @@ function displayProducts(products) {
     productContainer.appendChild(productDiv);
   });
 }
-const getData = () => {
+const getData = (page) => {
   const myHeaders = new Headers();
   myHeaders.append("country", "jo");
   myHeaders.append("source", "desktop");
@@ -85,13 +85,13 @@ const getData = () => {
     })
     .then(() => {
 		if(page < numberOfPages)
-		  incrementPage(++page);
+		  incrementPage(page);
     })
     .catch((error) => console.log("error", error));
 };
 
-const incrementPage = () => {
-  setTimeout(getData(), 1000 * 0.2);
+const incrementPage = (p) => {
+  setTimeout(getData(p + 1), 1000 * 0.2);
 };
 
-getData();
+getData(0);
