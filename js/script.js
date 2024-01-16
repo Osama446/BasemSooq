@@ -2,7 +2,7 @@ const filtered = [
   51534303, 253782, 65848252, 4328785, 25565916, 2859599, 2260470, 14033542,
   17333325, 4722129, 14229363, 14229363, 57295505, 4722129, 66942198, 14769870,
   58900, 11520995, 14769870, 57463713, 33182870, 40395096, 58743047, 60288619,26917287,
-  1347842, 62161607, 12252248, 7505861, 27853106, 606717, 43868446, 64804481,21350876, 340441,64804481
+  1347842, 62161607, 12252248, 7505861, 27853106, 606717, 43868446, 64804481,21350876,8599849, 340441,64804481
 ];
 let numberOfPages;
 //let page = 0;
@@ -72,7 +72,7 @@ const getData = (page) => {
   };
 
   fetch(
-    `https://api.opensooq.com/v2.1/posts?fields=id,record_posted_date_timestamp,members_id,title,natural_date,price,display_name,deeplink,first_image_thumb,description,statusLabel&expand=custom_param_array&acceptDecimalPrice=1&supportCurrency=true&PostSearch[cityId]=59&PostSearch[neighborhood_id]=6833,18349,13336,6743,10886,6835,6869,6851,6801,6759,6781,6863&PostSearch[categoryId]=8035&PostSearch[subCategoryId]=8037&PostSearch[dynamicAttributes][Surface][from]=101&PostSearch[dynamicAttributes][Surface][to]=175&PostSearch[dynamicAttributes][Surface][unit]=1&PostSearch[search_type]=all&PostSearch[priceFrom]=200&PostSearch[priceTo]=370&per-page=50&page=${page}&PostSearch[term]=`,
+    `https://api.opensooq.com/v2.1/posts?fields=id,record_posted_date_timestamp,members_id,title,natural_date,price,display_name,deeplink,first_image_thumb,description,statusLabel&expand=custom_param_array&acceptDecimalPrice=1&supportCurrency=true&PostSearch[cityId]=59&PostSearch[neighborhood_id]=6833,18349,13336,6743,10886,6835,6869,6851,6801,6759,6781,6863&PostSearch[categoryId]=8035&PostSearch[subCategoryId]=8037&PostSearch[dynamicAttributes][Surface][from]=101&PostSearch[dynamicAttributes][Surface][to]=175&PostSearch[dynamicAttributes][Surface][unit]=1&PostSearch[search_type]=all&PostSearch[priceFrom]=200&PostSearch[priceTo]=5000&per-page=50&page=${page}&PostSearch[term]=`,
     requestOptions
   )
     .then((response) => response.json())
