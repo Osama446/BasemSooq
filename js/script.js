@@ -94,4 +94,4 @@ const incrementPage = (p) => {
   setTimeout(getData(p + 1), 1000 * 0.2);
 };
 
-getData(0);
+getData(1);
