@@ -82,7 +82,7 @@ const getData = (page) => {
       displayProducts(
         result.items.filter((a) => filtered.indexOf(a.members_id) === -1 && a.custom_param_array.indexOf("مفروشة") === -1
 			   && a.display_name.indexOf("عقاريه") === -1 && a.display_name.indexOf("عقارية") === -1 && a.display_name.indexOf("group") === -1
-			   && a.display_name.indexOf("العقارية") === -1 && a.display_name.indexOf("العقاريه") === -1
+			   && a.display_name.indexOf("العقارية") === -1 && a.display_name.indexOf("العقاريه") === -1 && a.display_name.indexOf("Group") === -1
 			   )
       );
     })
